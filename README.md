@@ -24,13 +24,23 @@ This Repository aims to provide an easy step-by-step procedure for installing an
 - Convert .pt model to ONNX and then into .rknn.
 - #### Important: Converting the original model directly to .onnx and then to .rknn may not work as expected. The resulting .rknn model might fail to produce any detection results during inference, and it may not throw any errors either.
   ### Step 3.1
-  Export .pt model to ONNX 
+  Export .pt model to .onnx 
   - `` git clone https://github.com/ultralytics/ultralytics.git``
   - `` cd ultralytics``
   - `` git checkout 0b0bc56675997fe66b13aa0d250b777c8a467e32``
   - `` # Adjust the model file path in "./ultralytics/cfg/default.yaml" (default is yolov8n.pt). If you trained your own model, please provide the corresponding path. ``
   - `` export PYTHONPATH=./ ``
-  - `` # Upon completion, the ".onnx" model will be generated. If the original model is "yolov8n.pt," the generated model will be "yolov8n.onnx" ``
+  - `` # Upon completion, the ".onnx" model will be generated. If the original model is "yolov8n.pt," the generated model will be "yolov8n.onnx" ``\
 Using [Netron.app](https://netron.app/), your converted model's output should look like the one on the right side of the figure below.
 ![Screenshot from 2025-04-14 16-00-37](https://github.com/user-attachments/assets/0ba27125-d173-4f7d-bb70-b68a4c2abb68)
+
+### Step 3.2
+Convert .onnx to .rknn
+- ``git clone https://github.com/airockchip/rknn_model_zoo.git``
+- `` cd rknn_model_zoo/examples/yolov8/python ``
+- python convert.py <onnx_model> <TARGET_PLATFORM> <dtype(optional)> <output_rknn_path(optional)> 
+- for example :  `` python convert.py ../model/yolov8n.onnx rk3588 ``(output model will be saved as ../model/yolov8.rknn)
+- Visualize converted .rknn model using Netron app, and your model should look like the one on the right side.
+![Screenshot from 2025-04-14 16-23-55 (1)](https://github.com/user-attachments/assets/ba930129-1c21-44ba-919a-31f867ccf56f)
+
 
