@@ -1,4 +1,4 @@
-# Custom-YoloV8-NPU
+# Custom-YoloV8-NPU for C++
 ![bus_result](https://github.com/user-attachments/assets/f0471ff9-f394-457b-a251-5ea9a87f6064)
 ## Description
 Running custom YOLO models on OrangePi RK3566/68/88 using the NPU can be challenging, especially when the model is trained on a custom dataset with a different number of classes than the original model.
@@ -23,7 +23,7 @@ This Repository aims to provide an easy step-by-step procedure for installing an
 
 ## Step 3:
 - Convert .pt model to ONNX and then into .rknn.
-- #### Important: Converting the original model directly to .onnx and then to .rknn may not work as expected. The resulting .rknn model might fail to produce any detection results during inference, and it may not throw any errors either.
+- #### Important: Converting the original model directly to .onnx and then to .rknn may not work as expected. The resulting .rknn model might fail to produce any detection results during inference, and it may not throw any errors, either.
   ### Step 3.1
   Export .pt model to .onnx 
   - `` git clone https://github.com/ultralytics/ultralytics.git``
@@ -50,3 +50,12 @@ Convert .onnx to .rknn
 -  for example, if your yoloV8 model is trained on 10 classes, value value from 80 to 10 on line 12
 -  #define OBJ_CLASS_NUM 80 --> #define OBJ_CLASS_NUM 10
 ### Done
+
+
+## Credit:
+This project builds upon the work of the following open-source repositories:
+
+[Q-engineering's YOLOv8 RKNN implementation](https://github.com/Qengineering/YoloV8-NPU) – used and adapted under the BSD 3-Clause License.\
+[Rockchip's RKNN Model Zoo](https://github.com/airockchip/rknn_model_zoo) – methods and examples were referenced for model conversion and deployment on RK3566/RK3588 NPUs.\
+[Ultralytics](https://github.com/ultralytics/ultralytics)\
+Special thanks to the authors and contributors of these projects.
