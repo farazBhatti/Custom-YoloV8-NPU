@@ -14,7 +14,7 @@ This Repository aims to provide an easy step-by-step procedure for installing an
 `` cd ~ `` \
 `` sudo rm -rf ./rknn-toolkit2-master ``
 ## Step 2:
-- Clone this repo: ``git clone ADD LINK``
+- Clone this repo: ``git clone https://github.com/farazBhatti/Custom-YoloV8-NPU.git``
 - Compile code using CMake
     `` mkdir build ``\
   `` cd build ``\
