@@ -43,4 +43,9 @@ Convert .onnx to .rknn
 - Visualize converted .rknn model using Netron app, and your model should look like the one on the right side.
 ![Screenshot from 2025-04-14 16-23-55 (1)](https://github.com/user-attachments/assets/ba930129-1c21-44ba-919a-31f867ccf56f)
 
-
+### Step 4
+- Change number of classes your modle has been trained on, by default it is set to 80.
+-  include/rk_common.h
+-  for example, if your yoloV8 model is trained on 10 classes, value value from 80 to 10 on line 12
+-  #define OBJ_CLASS_NUM 80 --> #define OBJ_CLASS_NUM 10
+### Done
