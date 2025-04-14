@@ -1,4 +1,5 @@
 # Custom-YoloV8-NPU
+![bus_result](https://github.com/user-attachments/assets/f0471ff9-f394-457b-a251-5ea9a87f6064)
 ## Description
 Running custom YOLO models on OrangePi RK3566/68/88 using the NPU can be challenging, especially when the model is trained on a custom dataset with a different number of classes than the original model.
 This Repository aims to provide an easy step-by-step procedure for installing and running a custom YoloV8 model using the NPU of orangePi5. However, it can also be used for other hardware, such as Rock 5 and Radxa Zero 3.
