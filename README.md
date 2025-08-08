@@ -29,7 +29,8 @@ This Repository aims to provide an easy step-by-step procedure for installing an
   - `` git clone https://github.com/ultralytics/ultralytics.git``
   - `` cd ultralytics``
   - `` git checkout 0b0bc56675997fe66b13aa0d250b777c8a467e32``
-  - `` # Adjust the model file path in "./ultralytics/cfg/default.yaml" (default is yolov8n.pt). If you trained your own model, please provide the corresponding path. ``
+  - `` # Adjust the model file path in "./ultralytics/cfg/default.yaml" (default is yolov8n.pt). If you trained your own model, please provide the corresponding path.``
+  - Sample default.yaml file attached [here](https://github.com/farazBhatti/Custom-YoloV8-NPU/blob/main/default.yaml)
   - `` export PYTHONPATH=./ ``
   - Run command: `` python3 ./ultralytics/engine/exporter.py ``
   - `` # Upon completion, the ".onnx" model will be generated. If the original model is "yolov8n.pt," the generated model will be "yolov8n.onnx" ``\
