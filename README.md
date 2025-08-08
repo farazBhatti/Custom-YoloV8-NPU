@@ -31,6 +31,7 @@ This Repository aims to provide an easy step-by-step procedure for installing an
   - `` git checkout 0b0bc56675997fe66b13aa0d250b777c8a467e32``
   - `` # Adjust the model file path in "./ultralytics/cfg/default.yaml" (default is yolov8n.pt). If you trained your own model, please provide the corresponding path. ``
   - `` export PYTHONPATH=./ ``
+  - Run command: `` python3 ./ultralytics/engine/exporter.py ``
   - `` # Upon completion, the ".onnx" model will be generated. If the original model is "yolov8n.pt," the generated model will be "yolov8n.onnx" ``\
 Using [Netron.app](https://netron.app/), your converted model's output should look like the one on the right side of the figure below.
 ![Screenshot from 2025-04-14 16-00-37](https://github.com/user-attachments/assets/0ba27125-d173-4f7d-bb70-b68a4c2abb68)
